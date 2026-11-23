@@ -83,11 +83,11 @@ namespace Demo_project
             //sb.AppendLine("Hello");
 
             //Console.WriteLine(sb);     //output: HelloName: Mahmoud Age: 22 Grade: 95.5 
-                                       //Hello
-                                       //mahmoud
-                                       //ibrahim
-                                       //Hello
-                                       //Hello
+            //Hello
+            //mahmoud
+            //ibrahim
+            //Hello
+            //Hello
 
 
 
@@ -115,6 +115,60 @@ namespace Demo_project
             ////string.Format()
 
             //Console.WriteLine(string.Format("Hello {0}, Welcome to the C# World!", name2)); //string.Format() output: Hello Mahmoud, Welcome to the C# World!
+
+            #endregion
+
+            #region Nullable Types 
+
+            //string name = null;                    //string is a reference type, so it can be null
+
+            //int age = null;  //Error              //int is a value type, so it cannot be null
+
+            //int? age2 = null;                   //int? is a nullable value type, so it can be null
+
+            //------------------------------------------------------------------------------
+
+            //HasValue Property
+
+            //int? age3 = 25;
+            //Console.WriteLine(age3.HasValue);          //output: True
+
+            //int? age4 = null;
+            //Console.WriteLine(age4.HasValue);        //output: False
+
+
+            //---------------------------------------------------------------------------------
+
+            //Value Property
+
+            //int? age5 = 30;
+
+            // Console.WriteLine(age5.Value);              //output: 30
+
+
+
+            // int? age = null;
+
+            // Console.WriteLine(age.Value);               // Exception
+
+            //---------------------------------------------------------------------------------
+
+            //GetValueOrDefault()
+
+            //  int? age = 25;
+
+            //Console.WriteLine(age.GetValueOrDefault());           //output: 25
+
+
+
+            // int? age2 = null;
+
+            //Console.WriteLine(age2.GetValueOrDefault());           //output: 0
+
+            //---------------------------------------------------------------------------------
+
+
+
 
             #endregion
         }
