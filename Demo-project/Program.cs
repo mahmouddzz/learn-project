@@ -171,6 +171,42 @@ namespace Demo_project
 
 
             #endregion
+
+            #region Null Operators
+
+            //null conditional operator (?.)
+
+            // string ? name = "mahmoud";
+
+            // name?.ToUpper();                    //if name is not null, it will convert it to upper case, otherwise it will return null
+
+            //Console.WriteLine(name);            //output: mahmoud
+
+
+            //-----------------------------------------------------------------------------------------
+
+
+
+            //null coalescing operator (??)
+
+            //string? name = null;
+
+            //Console.WriteLine(name ?? "Name is null");        //if name is null, it will return "Name is null", otherwise it will return the value of name
+
+
+            //-----------------------------------------------------------------------------------------
+
+
+            //null forgiving operator (??=)
+
+           // string? name = "mahmoud";
+
+           /// string confermedName = name!;
+
+           // Console.WriteLine(confermedName);            //output: mahmoud
+
+
+            #endregion
         }
     }
 }
