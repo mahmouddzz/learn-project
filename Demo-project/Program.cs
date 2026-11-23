@@ -1,4 +1,6 @@
-﻿namespace Demo_project
+﻿using System.Text;
+
+namespace Demo_project
 {
     internal class Program
     {
@@ -49,12 +51,45 @@
 
             #region  Path.Combine()
 
-            string folderPath = @"C:\Users\Public\Documents";
-            string fileName = "Report.txt";
+            //string folderPath = @"C:\Users\Public\Documents";
+            //string fileName = "Report.txt";
 
-            string fullPath = Path.Combine(folderPath, fileName);
+            //string fullPath = Path.Combine(folderPath, fileName);
 
-            Console.WriteLine(fullPath);   //output: C:\Users\Public\Documents\Report.txt
+            //Console.WriteLine(fullPath);   //output: C:\Users\Public\Documents\Report.txt
+
+            #endregion
+
+            #region StringBuilder
+
+            StringBuilder sb = new StringBuilder("Hello");
+
+            sb.Append("Name: ");
+            sb.Append("Mahmoud");
+
+            sb.Append(" Age: ");
+            sb.Append(22);
+
+            sb.Append(" Grade: ");
+            sb.Append(95.5);
+
+            Console.WriteLine(sb); //output: HelloName: Mahmoud Age: 22 Grade: 95.5 
+
+
+            sb.AppendLine("Hello");
+            sb.AppendLine("mahmoud");
+            sb.AppendLine("ibrahim");
+            sb.AppendLine("Hello");
+            sb.AppendLine("Hello");
+
+            Console.WriteLine(sb);     //output: HelloName: Mahmoud Age: 22 Grade: 95.5 
+                                       //Hello
+                                       //mahmoud
+                                       //ibrahim
+                                       //Hello
+                                       //Hello
+
+
 
             #endregion
         }
