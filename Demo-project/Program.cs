@@ -38,12 +38,23 @@
 
             #region Verbatim Strings
 
-            string path = "C:\\Users\\Public\\ocuments\\Report.txt"; // Normal string literal
-            string verbatimPath = @"C:\Users\Public\Documents\Report.txt"; // Verbatim string literal
+            //string path = "C:\\Users\\Public\\ocuments\\Report.txt"; // Normal string literal
+            //string verbatimPath = @"C:\Users\Public\Documents\Report.txt"; // Verbatim string literal
 
-            Console.WriteLine(path);
-            Console.WriteLine(verbatimPath);
+            //Console.WriteLine(path);
+            //Console.WriteLine(verbatimPath);
 
+
+            #endregion
+
+            #region  Path.Combine()
+
+            string folderPath = @"C:\Users\Public\Documents";
+            string fileName = "Report.txt";
+
+            string fullPath = Path.Combine(folderPath, fileName);
+
+            Console.WriteLine(fullPath);   //output: C:\Users\Public\Documents\Report.txt
 
             #endregion
         }
