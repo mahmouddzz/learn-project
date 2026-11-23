@@ -13,7 +13,18 @@
             //Console.WriteLine(newName);
             #endregion
 
+            #region Initialize a Null or Empty String
 
+            //string str01 = null;
+            //string str02 = string.Empty;
+            //string str03 = "";
+            //string str04 = default;
+
+            //Console.WriteLine(str01);
+            //Console.WriteLine(str02);
+            //Console.WriteLine(str03);
+            //Console.WriteLine(str04);
+            #endregion
 
         }
     }
