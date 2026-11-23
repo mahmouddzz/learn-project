@@ -26,6 +26,16 @@
             //Console.WriteLine(str04);
             #endregion
 
+            #region ReferenceEquals()
+            // ReferenceEquals() method is used to check whether two object references refer to the same object or not.
+
+            //string str1 = new string("Hello".ToCharArray());
+            //string str2 = new string("Hello".ToCharArray());
+
+            //Console.WriteLine(object.ReferenceEquals(str1, str2));         // false 
+
+            #endregion
+
         }
     }
 }
