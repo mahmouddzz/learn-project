@@ -62,27 +62,27 @@ namespace Demo_project
 
             #region StringBuilder
 
-            StringBuilder sb = new StringBuilder("Hello");
+            //StringBuilder sb = new StringBuilder("Hello");
 
-            sb.Append("Name: ");
-            sb.Append("Mahmoud");
+            //sb.Append("Name: ");
+            //sb.Append("Mahmoud");
 
-            sb.Append(" Age: ");
-            sb.Append(22);
+            //sb.Append(" Age: ");
+            //sb.Append(22);
 
-            sb.Append(" Grade: ");
-            sb.Append(95.5);
+            //sb.Append(" Grade: ");
+            //sb.Append(95.5);
 
-            Console.WriteLine(sb); //output: HelloName: Mahmoud Age: 22 Grade: 95.5 
+            //Console.WriteLine(sb); //output: HelloName: Mahmoud Age: 22 Grade: 95.5 
 
 
-            sb.AppendLine("Hello");
-            sb.AppendLine("mahmoud");
-            sb.AppendLine("ibrahim");
-            sb.AppendLine("Hello");
-            sb.AppendLine("Hello");
+            //sb.AppendLine("Hello");
+            //sb.AppendLine("mahmoud");
+            //sb.AppendLine("ibrahim");
+            //sb.AppendLine("Hello");
+            //sb.AppendLine("Hello");
 
-            Console.WriteLine(sb);     //output: HelloName: Mahmoud Age: 22 Grade: 95.5 
+            //Console.WriteLine(sb);     //output: HelloName: Mahmoud Age: 22 Grade: 95.5 
                                        //Hello
                                        //mahmoud
                                        //ibrahim
@@ -90,6 +90,31 @@ namespace Demo_project
                                        //Hello
 
 
+
+            #endregion
+
+            #region String Formatting 
+
+            //string concatenation 
+
+            //string name = "Mahmoud"; 
+
+            //string message = "Hello " + name + ", Welcome to the C# World!"; //concatenation
+
+            //Console.WriteLine(message);  //output: Hello Mahmoud, Welcome to the C# World!
+
+
+            ////string interpolation
+
+            //string name2 = "Mahmoud";
+
+            //string message2 = $"Hello {name2}, Welcome to the C# World!"; //interpolation
+
+            //Console.WriteLine(message2); //output: Hello Mahmoud, Welcome to the C# World!
+
+            ////string.Format()
+
+            //Console.WriteLine(string.Format("Hello {0}, Welcome to the C# World!", name2)); //string.Format() output: Hello Mahmoud, Welcome to the C# World!
 
             #endregion
         }
