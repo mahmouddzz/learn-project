@@ -36,6 +36,16 @@
 
             #endregion
 
+            #region Verbatim Strings
+
+            string path = "C:\\Users\\Public\\ocuments\\Report.txt"; // Normal string literal
+            string verbatimPath = @"C:\Users\Public\Documents\Report.txt"; // Verbatim string literal
+
+            Console.WriteLine(path);
+            Console.WriteLine(verbatimPath);
+
+
+            #endregion
         }
     }
 }
