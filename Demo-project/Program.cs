@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Demo_project
+namespace Session04
 {
     internal class Program
     {
