@@ -71,88 +71,162 @@
 
             #region User Defined Functions
 
-            //built in functions
-            //
-            // Console.WriteLine();
-            // toupper();
-            // ToLower();
-            // substring();
+            ////built in functions
+            ////
+            //// Console.WriteLine();
+            //// toupper();
+            //// ToLower();
+            //// substring();
 
-            //--    -------------------------------------------------------------
+            ////--    -------------------------------------------------------------
 
-            //user defined functions example
+            ////user defined functions example
 
-            void PrintWelcomeMessage()
+            //void PrintWelcomeMessage()
+            //{
+            //    Console.WriteLine("Welcome to C# Programming");
+            //}
+
+            ////-------------------------------------------------------------
+
+            ////function returning a value
+
+            //int AddNumbers(int a, int b)
+            //{
+            //   int result = a + b;
+            //   return result;         // return the result to the caller
+
+            //}
+
+            ////calling the function
+
+            //int total = AddNumbers(10, 20);
+            //Console.WriteLine(total);           //output : 30
+
+            ////-------------------------------------------------------------
+
+            ////Void function not returning a value
+
+            //void PrintMessage()
+            //{
+            //    Console.WriteLine("Hello, World!");
+            //}
+
+            //PrintMessage();        //calling the function
+
+
+            ////-------------------------------------------------------------
+
+            //// Example for user defined function         
+
+            //int CalculateTotal(int math , int science, int english)
+            //{
+            //    int total = math + science + english;
+            //    return total;
+            //}
+
+            //double CalculateAverage(int Total)
+            //{
+            //    double total = Total / 3.0;
+            //    return total;
+
+            //}
+
+            //void PrintResult(int total, double average)
+            //{
+            //    Console.WriteLine($"Total Marks: {total}");
+            //    Console.WriteLine($"Average Marks: {average}");
+
+            //    if (average>=50)
+            //    {
+            //        Console.WriteLine("You have passed!");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("You have failed!");
+            //    }
+            //}
+
+            ////calling the functions
+
+            //PrintResult(100, 60.0);
+
+
+
+            #endregion
+
+            #region Passing Parameters to Functions
+
+            static void PrintStudentInfo(string name, int age)
             {
-                Console.WriteLine("Welcome to C# Programming");
+                Console.WriteLine($"Name: {name}");
+                Console.WriteLine($"Age: {age}");
             }
+            //-------------------------------------------------------------
+            //passing by position parameters
+
+            PrintStudentInfo("Mahmoud", 20); /// بنبعت القيم على حسب ترتيب البراميترز في الديفينيشن
 
             //-------------------------------------------------------------
 
-            //function returning a value
+
+            //passing by named parameters
+
+            PrintStudentInfo(name: "Ahmed", age: 25); /// بنبعت القيم على حسب اسم البراميترز في الديفينيشن
+
+            //-------------------------------------------------------------
+
+            //defult values for parameters
+
+            static void PrintStudentInfoo(string name, int age = 0)  // defult value for age parameter is 0 
+                                                                     //لو بعتنا سن هيتحط لو مبعتناش هيحط زيرو
+            {
+                Console.WriteLine($"Name: {name}");
+                Console.WriteLine($"Age: {age}");
+            }
+
+            PrintStudentInfoo("Ali");                     //output : Name: Ali , Age: 0
+
+            PrintStudentInfoo("Ali", 30);                 //output : Name: Ali , Age: 30
+
+            //-------------------------------------------------------------
+
+            //passing by value .... Copy of the value is passed to the function, any changes made to the parameter inside the function will not affect the original value
+
+            static void ChangeNumber(int number)
+            {
+                number = 100;           //change the value of the parameter
+                Console.WriteLine(number);
+            }
             
-            int AddNumbers(int a, int b)
+            static void main()
             {
-               int result = a + b;
-               return result;         // return the result to the caller
-
-            }
-
-            //calling the function
-
-            int total = AddNumbers(10, 20);
-            Console.WriteLine(total);           //output : 30
+                int num = 50;
+                ChangeNumber(num);
+                Console.WriteLine(num);     //output : 50
+            }   
+            ChangeNumber(5);             //output : 100
 
             //-------------------------------------------------------------
 
-            //Void function not returning a value
+            //passing by reference .... Reference of the value is passed to the function, any changes made to the parameter inside the function will affect the original value
 
-            void PrintMessage()
+
+            static void ChangeNumberByRef(ref int number)
             {
-                Console.WriteLine("Hello, World!");
+                number = 100;           //change the value of the parameter
+                Console.WriteLine(number);
             }
 
-            PrintMessage();        //calling the function
-
-
-            //-------------------------------------------------------------
-
-            // Example for user defined function         
-
-            int CalculateTotal(int math , int science, int english)
+            static void main2()
             {
-                int total = math + science + english;
-                return total;
+                int num = 50;
+                ChangeNumberByRef(ref num);
+                Console.WriteLine("num: " + num);     //output : 100
             }
 
-            double CalculateAverage(int Total)
-            {
-                double total = Total / 3.0;
-                return total;
 
-            }
-
-            void PrintResult(int total, double average)
-            {
-                Console.WriteLine($"Total Marks: {total}");
-                Console.WriteLine($"Average Marks: {average}");
-
-                if (average>=50)
-                {
-                    Console.WriteLine("You have passed!");
-                }
-                else
-                {
-                    Console.WriteLine("You have failed!");
-                }
-            }
-
-            //calling the functions
-
-            PrintResult(100, 60.0);
-
-
-
+                    
             #endregion
         }
     }
