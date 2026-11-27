@@ -226,7 +226,50 @@
             }
 
 
-                    
+
+            #endregion
+
+            #region Changing The Refrence 
+
+
+
+            #endregion
+
+            #region Changing The Refff
+
+            //changing the refrence in functions not refrence type
+
+            static void ChangeArray(int[] numbers)
+            {
+
+                numbers = new int[] { 100, 200, 300 };   //change the reference of the array
+                
+            }
+
+            static void main3()
+            {
+                int[] numbers = { 1, 2, 3 };
+                ChangeArray(numbers);
+                Console.WriteLine(numbers[0]);     //output : 1
+            }
+
+            //-------------------------------------------------------------
+
+            //changing the refrence in functions with refrence type
+
+            static void ChangeArrayByRef(ref int[] numbers)
+            {
+                numbers = new int[] { 100, 200, 300 };   //change the reference of the array
+            }
+
+            static void main4()
+            {
+                int[] numbers = { 1, 2, 3 };
+                ChangeArrayByRef(ref numbers);
+                Console.WriteLine(numbers[0]);     //output : 100
+            }
+
+
             #endregion
         }
     }
