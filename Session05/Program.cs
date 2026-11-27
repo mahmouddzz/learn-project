@@ -271,6 +271,30 @@
 
 
             #endregion
+
+            #region Out parameters
+
+            //out parameters are used to return multiple values from a function
+            //نستخدم ال out parameters لما نحب نرجع اكتر من قيمة من الفنكشن
+
+            static void Calculate(int a, int b, out int sum, out int product)
+            {
+                sum = a + b;
+                product = a * b;
+            }
+
+            static void main5()
+            {
+                int result1;
+                int result2;
+
+                Calculate(10, 20, out result1, out result2);
+
+                Console.WriteLine(result1);
+                Console.WriteLine(result2);
+
+            }
+            #endregion
         }
     }
 }
