@@ -295,6 +295,41 @@
 
             }
             #endregion
+
+            #region passing by params 
+
+            //non params
+
+            static void printNumbers(int[] numbers)
+            {
+                foreach (int number in numbers)
+                {
+                    Console.WriteLine(number);
+                }
+            }
+
+            // لاوم تجهز الاراي الاول قبل ما تبعتهم للفنكشن
+
+            int[] numbers = { 1, 2, 3, 4, 5 };
+
+            printNumbers(numbers);
+
+            //--------------------------------------------------------------
+
+            //use params 
+
+            static void PrintNumbers(params int[] numbers)
+            {
+                foreach (int number in numbers)
+                {
+                    Console.WriteLine(number);
+                }
+            }
+
+            PrintNumbers(1, 2, 3, 4, 5);   //output : 1 2 3 4 5
+            PrintNumbers(10, 20, 30, 40, 50);   //output : 10 20 30 40 50
+            
+            #endregion
         }
     }
 }
